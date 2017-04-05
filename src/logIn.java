@@ -18,6 +18,7 @@ public class logIn {
 	public JFrame frame;
 	public static JTextField uField;
 	private JLabel lblNewLabel;
+	
 	private JPasswordField passwordField;
 	
 	public static String getUser(){
