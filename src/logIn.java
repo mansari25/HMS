@@ -18,7 +18,6 @@ public class logIn {
 	public JFrame frame;
 	public static JTextField uField;
 	private JLabel lblNewLabel;
-	
 	private JPasswordField passwordField;
 	
 	public static String getUser(){
@@ -92,6 +91,7 @@ public class logIn {
 				pst.setString(2, passwordField.getText());
 				
 				ResultSet rs=pst.executeQuery();
+				
 				int count=0;
 				while(rs.next()){
 					count++;;
@@ -148,6 +148,17 @@ public class logIn {
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 14));
 		lblNewLabel_1.setBounds(195, 205, 61, 16);
 		enter.add(lblNewLabel_1);
+		
+		JButton btnNewButton = new JButton("<<BACK");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				Initial i=new Initial();
+				i.setVisible(true);
+			}
+		});
+		btnNewButton.setBounds(6, 6, 82, 29);
+		enter.add(btnNewButton);
 		
 		JPanel panel = new JPanel();
 		frame.getContentPane().add(panel, "name_24652196607481");
